@@ -1,0 +1,956 @@
+﻿(영어)
+<size=16>AnyPortrait Update Log v1.2.3</size>
+(Build April 25, 2020)
+
+<size=13>Improvements</size>
+
+- <color=blue>Animation processing</color> improvements and issues fixed
+    Smooth transition between 2 animation clips is improved
+    Significantly improved overall handling related to transitions and layering of animation clips
+    An issue is fixed that caused the control parameters are switched too quickly when the animation clips are switched
+    An issue is fixed that the negative value of an integer control parameter in animation is not calculated normally
+    An issue is fixed that blending is not worked properly when clips are played repeatedly in Unity's Timeline
+    When using "Timeline Simulator", which previews Unity's Timeline, it is improved to preview even when the game is not running in the editor.
+    <color=red>(For more information, please visit our homepage)</color>
+
+- Improvement of <color=blue>Editor UI</color>
+    It is prevented to scroll horizontally in the Hierarchy UI of the mesh group while editing the modifier
+    It is improved that the order in the Hierarchy UI to also apply to the Controller tab
+    Top area and margins of the modifier UI is improved to be more intuitive
+    A function works normally even if the cursor moves outside the workspace while dragging
+    If the options in the setting dialog are different from the default values, the colors are displayed differently
+    Warning message appears when restoring settings to default
+    Backspace and Delete are not distinguished in Mac OSX, so two keys are recognized as the same shortcut
+    "Trash icon" is added to all Detach/Delete buttons
+    Improved UI on the right side of the animation clip
+    The animation timeline UI can be zoomed by pressing Ctrl Key and scrolling the mouse wheel.
+    <color=red>(For more information, please visit our homepage)</color>
+
+- <color=blue>Editor and game performance optimization</color>
+    The problem is fixed that caused unnecessary memory usage and poor performance when the Hierarchy UI was refreshed
+    The performance in many processes, such as when starting modifiers, selecting objects in Hierarchy, and adding and deleting meshes in modifiers is improved
+    The issue is improved that the processing time of the editor increases when there are many animation clips
+    When loading a Portrait for the first time in the editor, a pop-up to see the loading process is displayed (except when opening the editor in the Inspector)
+    Processing speed is improved by optimizing unnecessary processing of non-rendered meshes
+    <color=red>(For more information, please visit our homepage)</color>
+
+- Improved usability of <color=blue>Bones and Rigging</color>
+    In the setting dialog, you can set the size of bones and whether the size increase according to the screen zoom
+    In the workspace, the color of the bone's outline is changed to be different from the bone color
+    When a bone is selected in the workspace, the outline of the bone is slightly shiny to be easy to distinguish
+    "Needle shape", which is the new shape of bones is added
+    It is easier to select bones when clicking with the mouse than before
+    In the bone setting UI of the mesh group, preset buttons to set the color of the bone easily are added
+    If the option of bones is set that new bone's color is similar to the parent, its color is not too much similar to the parent than before
+    "Vivid" option is added to show rigging gradation composed of different colors
+    The option is added to make the selected area of ​​the vertex's circular rigging weights easy to distinguish
+    The option is added to set the size of vertex's circular rigging weights
+    If the value of the weight in the circular rigging weights of the vertex is small, it is difficult to see, so it is displayed separately in the center of the circle
+    Vertex's circular rigging weight's click area is larger than before
+    The feature is added to show translucent or hide the non-rigging bones
+    Shortcut keys are added to adjust rigging weight (Z,X: change by 0.02, Shift+Z,X: change by 0.05)
+    While holding Ctrl, Shift or Alt key in editing rigging, bones are not selected
+    A shortcut key is added for deleting bones in the setting screen (Delete key)
+    <color=red>(For more information, please visit our homepage)</color>
+
+- When hiding or showing objects with the Color option of the modifier, an option to switch immediately without being translucent is added
+- An option is added to change AnyPortrait package installation path <color=red>(For more information, please visit our homepage)</color>
+- Performance in game is improved when placing and running multiple characters with Fixed FPS by turning off the Important option
+- It is improved so that the temporary visibility is maintained even if you do any action, if the option of keeping temporarily visibility of meshes and bones is selected
+- Since Unity 2019.3, it becomes difficult to press the button due to the location of the tooltip, so the tooltip does not appear from that version
+- The text is changed about non-Bake in the Inspector UI
+
+
+
+
+<size=13>Fixed issues</size>
+
+- A problem is fixed that the mapping to sub-mesh groups and theirs child meshes was released when opening a PSD file
+- A bug is fixed that the visibility info (eye icon) of objects in the sub-mesh group are not refreshed properly
+- An issue is fixed that GUI Control error log is occurred while editing modifier
+- A bug is fixed that the editor does not work properly, when there is no registered Root Unit and the editor is opened directly in the Inspector
+- A bug is fixed that undoing caused all data to be corrupted when changing the target mesh group of the animation to the parent mesh group, initializing the data
+- A bug is fixed that the Bake is failed due to the data when the sub-mesh group was removed after being rigged from the parent's meshes
+- A problem is fixed that selecting a bone, a mesh, or a sub mesh group at the same time through Hierarchy of a mesh group is possible when editing the modifier
+- A bug is fixed that the FFD tool is not released when another object is selected while using the FFD tool
+- An issue is fixed that GUI error log is occurred when selecting another object during Physic modifier editing
+- An issue is fixed that the Top UI was displayed strangely when selecting an object while editing a Physic modifier
+- An issue is fixed that it was difficult to distinguish from the parent item because the front margin of the 2nd level child item was strange in Hierarchy UI
+- A bug is fixed that the vertical scroll bar of the animation timeline UI is not work normally when using the mouse
+- An issue is fixed that "Auto-loop keyframes" are not refreshed when changing the animation length or loop option
+- An issue is fixed that "Undo" is not worked when changing the animation length or loop option
+- A typo is fixed where the vector properties of the Transform item are output as (X, X) to be output as (X, Y) in the animation's keyframe property UI
+- An issue is fixed that the "Bake" is not processed properly when the custom property as the texture type is created in the Material Library and "Texture Per Image" is selected.
+
+
+
+-----------------------------------------
+(한국어)
+<size=16>AnyPortrait 업데이트 로그 v1.2.3</size>
+(2020년 4월 25일 빌드)
+
+<size=13>개선된 사항</size>
+
+- <color=blue>애니메이션 실행</color> 개선 및 문제 수정
+    2개의 애니메이션 클립이 이전보다 더 자연스럽게 전환되도록 개선
+    애니메이션 클립의 전환과 레이어링 관련 처리를 전체적으로 크게 개선
+    애니메이션 클립이 전환될 때, 컨트롤 파라미터가 너무 빠르게 전환되는 문제 수정
+    애니메이션에서 정수형(Integer) 컨트롤 파라미터의 값이 음수인 경우, 정상적으로 연산이 안되는 문제 수정
+    유니티의 타임라인(Timeline) 기능 사용시 클립이 반복하여 재생될 때 블렌딩이 정상적으로 되지 않는 문제 수정
+    유니티의 타임라인(Timeline) 기능을 미리보는 "Timeline Simulator" 사용시, 에디터에서 게임이 실행하지 않을 때도 미리보기가 되도록 개선
+    <color=red>(자세한 설명은 홈페이지를 확인하세요)</color>
+
+- <color=blue>에디터의 UI</color> 개선
+    모디파이어를 편집하는 상태에서 메시 그룹의 하위 Hierarchy UI에서 가로 스크롤이 되지 않도록 변경
+    Hierarchy UI에서의 순서가 컨트롤 파라미터 탭에도 적용되도록 개선
+    모디파이어 UI의 상단 영역과 여백들을 조절하여 정보들이 더 잘 보이도록 개선
+    마우스를 드래그하다가 작업 공간 밖으로 커서가 이동해도 정상적으로 동작되도록 개선
+    설정 다이얼로그의 옵션이 기본값과 다르면 색상이 다르게 출력되도록 변경
+    설정을 기본값으로 되돌릴 때 경고 메시지가 등장
+    Mac OSX에서 Backspace와 Delete가 구분되어 있지 않으므로, 두개의 키를 같은 단축키로 인식하도록 변경
+    삭제, Detach 버튼에 휴지통 아이콘을 모두 추가
+    애니메이션 클립의 우측 UI를 개선
+    애니메이션 타임라인 UI의 확대/축소를 Ctrl키를 누르고 마우스 휠을 스크롤해도 가능하도록 개선
+    <color=red>(자세한 설명은 홈페이지를 확인하세요)</color>
+
+- <color=blue>에디터 및 실행 성능 최적화</color>
+    Hierarchy UI가 갱신될 때 불필요하게 메모리가 사용되거나 성능이 떨어지는 문제 수정
+    모디파이어 편집 시작 및 종료시, Hierarchy에서 객체 선택시, 메시를 모디파이어에 추가, 삭제시 등 많은 과정에서 실행 속도가 향상되도록 개선
+    애니메이션 클립의 개수가 많으면 에디터의 처리 시간이 급격히 증가하는 문제 수정
+    에디터에서 Portrait를 처음 로딩할 때, 로딩 과정을 볼 수 있는 팝업이 등장하도록 개선 (Inspector에서 에디터를 열 경우는 제외)
+    렌더링되지 않는 메시에 대한 불필요한 처리를 개선하여 처리 속도 향상
+    <color=red>(자세한 설명은 홈페이지를 확인하세요)</color>
+
+- <color=blue>본과 리깅</color>에 관한 사용성 개선
+    설정 다이얼로그에서 본의 크기와 화면 확대에 따른 크기 증가 여부 설정 가능
+    작업 공간에서 본을 선택할 때의 외곽선의 색상이 본 색상과 구분되도록 개선
+    작업 공간에서 본을 선택하면, 본의 외곽선이 약하게 반짝거려서 구분하기 쉽도록 변경
+    새로운 본의 외형인 "바늘 모양"이 추가
+    마우스로 클릭시 본을 조금 더 선택하기 쉽도록 개선됨
+    메시 그룹의 본 설정 UI에서, 본의 색상을 쉽게 설정할 수 있는 프리셋 버튼이 추가
+    "부모와 유사한 색상"으로 본이 생성되도록 옵션이 설정된 경우, 부모와 아주 유사한 색상을 갖지는 않도록 변경
+    기존과 다른 색상으로 구성된 리깅 그라데이션이 보여지는 "Vivid" 옵션 추가
+    버텍스의 원형 리깅 가중치의 선택된 영역이 더 구분되기 쉽도록 만드는 옵션 추가
+    버텍스의 원형 리깅 가중치의 크기를 설정하는 옵션 추가
+    버텍스의 원형 리깅 가중치에서 선택된 가중치의 값이 작으면 잘 보이지 않으므로, 원형의 중앙에 별도로 표시
+    버텍스의 원형 리깅 가중치의 클릭 영역이 기존보다 확대됨
+    리깅 작업 화면의 하단에 선택된 메시에 리깅이 되지 않은 본을 반투명하게 보여주거나 숨길 수 있는 버튼이 추가됨
+    리깅 가중치를 조절하는 단축키 추가 (Z,X키 : 0.02씩 증감, Shift+Z,X키 : 0.05씩 증감)
+    리깅 작업 중에 Ctrl, Shift, Alt키를 누른 상태에서는 본이 선택되지 않도록 개선
+    본 설정 화면에서 본을 삭제하는 단축키(Delete키) 추가
+    <color=red>(자세한 설명은 홈페이지를 확인하세요)</color>
+
+- 모디파이어의 Color 옵션으로 객체를 숨기거나 보여지게할 때, 반투명되지않고 바로 전환되는 옵션 추가
+- AnyPortrait 패키지 설치 경로를 바꿀 수 있는 옵션 추가 <color=red>(자세한 설명은 홈페이지를 확인하세요)</color>
+- Important 옵션을 끄고 고정 FPS로 다수의 캐릭터들을 배치하고 실행할 때의 성능을 개선
+- 모디파이어 편집을 시작하거나 종료할 때 메시, 본의 일시적 숨김이 유지되도록 옵션을 선택한 경우, 다른 작업을 하더라도 숨김 설정이 계속 유지되도록 개선
+- Unity 2019.3부터 툴팁의 위치로 인하여 버튼을 누르기가 힘들게 되어, 해당 버전부터는 툴팁이 나오지 않도록 변경
+- Inspector UI에서 Bake가 되지 않은 상태에 관한 문구를 변경
+
+
+
+<size=13>수정된 문제점</size>
+
+- PSD 파일을 열때, 하위 메시 그룹이나 그 하위의 메시로의 매핑이 해제되버리는 문제 수정
+- 하위 메시 그룹의 객체들의 출력 여부 정보(눈 모양의 아이콘)가 정상적으로 갱신되지 않는 문제 수정
+- 모디파이어를 편집하는 상태에서 GUI Control 에러 로그가 발생하는 문제 수정
+- 등록된 Root Unit이 없을때, Inspector에서 바로 에디터를 열 경우, 정상적으로 에디터가 실행되지 않는 문제 수정
+- 애니메이션의 대상 메시 그룹을 부모 메시 그룹으로 변경하고 데이터를 초기화한 뒤, 실행 취소를 하면 관련된 모든 데이터가 손상되는 문제 수정
+- 하위 메시 그룹의 본에 리깅이 된 후, 하위 메시 그룹이 제거 되었을 때 해당 정보로 인해 Bake가 실패되는 문제 수정
+- 모디파이어 편집시, 메시 그룹의 Hierarchy를 통해서 한개의 본과 한개의 메시, 또는 메시 그룹을 동시에 선택할 수 있는 문제 수정
+- FFD 툴을 이용하는 중에 다른 객체를 선택하면 FFD가 해제되지 않는 문제 수정
+- Physic 모디파이어 편집 중에 다른 객체를 선택하면 GUI 에러 로그가 발생하는 문제 수정
+- Physic 모디파이어 편집 중에 객체를 선택하면 상단 UI가 이상하게 보여지는 문제 수정
+- Hierarchy UI에서 2레벨의 자식 항목의 앞쪽 여백이 이상하여 부모 항목과 구분하기 어려운 문제 수정
+- 애니메이션 타임라인 UI의 세로 스크롤바를 마우스를 이용하여 움직일 때, 정상적으로 스크롤되지 않는 문제 수정
+- 애니메이션의 길이나 Loop 옵션을 변경할 때, "자동 루프 키프레임"들이 갱신되지 않는 문제 수정
+- 애니메이션의 길이나 Loop 옵션을 변경했을 때, "실행 취소"가 안되는 문제 수정
+- 애니메이션의 키프레임 속성 UI에서 Transform 항목의 벡터 속성들이 (X, X)로 출력되는 것을 (X, Y)로 출력되도록 수정
+- 재질 라이브러리(Material Library)에서 텍스쳐 타입의 커스텀 프로퍼티를 만들고 "Texture Per Image"를 선택한 경우 Bake가 되지 않는 문제 수정
+
+
+
+-----------------------------------------
+(프랑스어)
+<size=16>Fichier de mise à jour AnyPortrait v1.2.3</size>
+(Construit le 25 avril 2020)
+
+<size=13>Améliorations</size>
+
+- <color=blue>Amélioration du traitement d'animation</color> et problèmes résolus
+    La transition en douceur entre 2 clips d'animation est améliorée
+    Gestion globale nettement améliorée des transitions et de la superposition des clips d'animation
+    Un problème a été résolu qui entraînait une commutation trop rapide des paramètres de contrôle lors de la commutation des clips d'animation
+    Un problème est résolu: la valeur négative d'un paramètre de contrôle entier dans l'animation n'est pas calculée normalement
+    Un problème est résolu: le mélange ne fonctionne pas correctement lorsque les clips sont lus à plusieurs reprises dans la chronologie d'Unity
+    Lorsque vous utilisez "Timeline Simulator", qui prévisualise la chronologie d'Unity, il est amélioré de prévisualiser même lorsque le jeu n'est pas en cours d'exécution dans l'éditeur.
+    <color=red>(Pour plus d'informations, veuillez visiter notre page d'accueil)</color>
+
+- Amélioration de <color=blue>Éditeur UI</color>
+    Il est impossible de faire défiler horizontalement dans l'interface utilisateur de la hiérarchie du groupe de mailles lors de la modification du modificateur
+    Il est amélioré que l'ordre dans l'interface utilisateur de la hiérarchie s'applique également à l'onglet Contrôleur
+    La zone supérieure et les marges de l'interface utilisateur du modificateur sont améliorées pour être plus intuitives
+    Une fonction fonctionne normalement même si le curseur se déplace en dehors de l'espace de travail tout en faisant glisser
+    Si les options de la boîte de dialogue de réglage sont différentes des valeurs par défaut, les couleurs s'affichent différemment
+    Un message d'avertissement apparaît lors de la restauration des paramètres par défaut
+    Retour arrière et Supprimer ne sont pas distingués dans Mac OSX, donc deux touches sont reconnues comme le même raccourci
+    "Icône de corbeille" est ajoutée à tous les boutons Détacher/Supprimer
+    Interface utilisateur améliorée sur le côté droit du clip d'animation
+    L'interface utilisateur de la chronologie d'animation peut être agrandie en appuyant sur la touche Ctrl et en faisant défiler la molette de la souris.
+    <color=red>(Pour plus d'informations, veuillez visiter notre page d'accueil)</color>
+
+- <color=blue>Éditeur et optimisation des performances du jeu</color>
+    Le problème est résolu qui entraînait une utilisation inutile de la mémoire et de mauvaises performances lors de l'actualisation de l'interface utilisateur de la hiérarchie
+    Les performances de nombreux processus, comme le démarrage des modificateurs, la sélection d'objets dans la hiérarchie et l'ajout et la suppression de maillages dans les modificateurs, sont améliorées.
+    Le problème est amélioré: le temps de traitement de l'éditeur augmente lorsqu'il existe de nombreux clips d'animation
+    Lors du chargement d'un portrait pour la première fois dans l'éditeur, une fenêtre contextuelle pour voir le processus de chargement s'affiche (sauf lors de l'ouverture de l'éditeur dans l'inspecteur)
+    La vitesse de traitement est améliorée en optimisant le traitement inutile des maillages non rendus
+    <color=red>(Pour plus d'informations, veuillez visiter notre page d'accueil)</color>
+
+- Amélioration de la convivialité des <color=blue>os et du rigging</color>
+    Dans la boîte de dialogue de réglage, vous pouvez définir la taille des os et si la taille augmente en fonction du zoom de l'écran
+    Dans l'espace de travail, la couleur du contour de l'os est modifiée pour être différente de la couleur de l'os
+    Lorsqu'un os est sélectionné dans l'espace de travail, le contour de l'os est légèrement brillant pour être facile à distinguer
+    "Forme d'aiguille", qui est la nouvelle forme des os est ajoutée
+    Il est plus facile de sélectionner des os en cliquant avec la souris qu'auparavant
+    Dans l'interface utilisateur de configuration de l'os du groupe de mailles, des boutons prédéfinis pour définir facilement la couleur de l'os sont ajoutés
+    Si l'option des os est définie pour que la couleur du nouvel os soit similaire au parent, sa couleur n'est pas trop similaire au parent qu'auparavant
+    L'option "Vif" est ajoutée pour afficher la gradation du gréement composée de différentes couleurs
+    L'option est ajoutée pour rendre la zone sélectionnée des poids de gréement circulaire du sommet facile à distinguer
+    L'option est ajoutée pour définir la taille des poids de gréement circulaire du sommet
+    Si la valeur du poids dans les poids de gréement circulaires du sommet est petite, elle est difficile à voir, elle est donc affichée séparément au centre du cercle
+    La zone de clic du poids de gréement circulaire de Vertex est plus grande qu'auparavant
+    La fonctionnalité est ajoutée pour montrer translucide ou masquer les os non gréement
+    Des touches de raccourci sont ajoutées pour ajuster le poids du gréement (touche Z, X: changer de 0,02, Maj + Z, touche X: changer de 0,05)
+    Tout en maintenant la touche Ctrl, Maj ou Alt enfoncée lors de l'édition du gréement, les os ne sont pas sélectionnés
+    Une touche de raccourci est ajoutée pour supprimer les os dans l'écran de réglage (touche Supprimer)
+    <color=red>(Pour plus d'informations, veuillez visiter notre page d'accueil)</color>
+
+- Lorsque vous masquez ou affichez des objets avec l'option Couleur du modificateur, une option pour basculer immédiatement sans être translucide est ajoutée
+- Une option est ajoutée pour modifier le chemin d'installation du package AnyPortrait <color=red>(Pour plus d'informations, veuillez visiter notre page d'accueil)</color>
+- Les performances dans le jeu sont améliorées lors du placement et de l'exécution de plusieurs personnages avec FPS fixe en désactivant l'option Important
+- Il est amélioré pour que la visibilité temporaire soit maintenue même si vous effectuez une action, si l'option de garder temporairement la visibilité des mailles et des os est sélectionnée
+- Depuis Unity 2019.3, il devient difficile d'appuyer sur le bouton en raison de l'emplacement de l'infobulle, de sorte que l'infobulle n'apparaît pas à partir de cette version
+- Le texte est modifié à propos de non-Bake dans l'Inspector UI
+
+
+
+<size=13>Problème résolu</size>
+
+- Un problème est résolu: le mappage vers les groupes de sous-maillage et leurs maillages enfants a été libéré lors de l'ouverture d'un fichier PSD
+- Un bug est corrigé: les informations de visibilité (icône en forme d'œil) des objets du groupe de sous-maillage ne sont pas correctement actualisées
+- Un problème est résolu: le journal des erreurs de contrôle GUI s'est produit lors de la modification du modificateur
+- Un bug est corrigé que l'éditeur ne fonctionne pas correctement, lorsqu'il n'y a pas d'unité racine enregistrée et que l'éditeur est ouvert directement dans l'inspecteur
+- Un bug a été corrigé qui annulait la corruption de toutes les données lors du changement du groupe de mailles cible de l'animation en groupe de mailles parent, initialisant les données
+- Un bug est corrigé que la cuisson échoue en raison des données lorsque le groupe de sous-mailles a été supprimé après avoir été truqué à partir des mailles du parent
+- Un problème est résolu: la sélection d'un os, d'un maillage ou d'un sous-groupe de maillages en même temps via la hiérarchie d'un groupe de maillages est possible lors de la modification du modificateur
+- Un bug est corrigé que l'outil FFD n'est pas libéré lorsqu'un autre objet est sélectionné lors de l'utilisation de l'outil FFD
+- Un problème est résolu: le journal des erreurs de l'interface graphique s'est produit lors de la sélection d'un autre objet lors de l'édition du modificateur physique
+- Un problème est résolu: l'interface utilisateur supérieure était étrangement affichée lors de la sélection d'un objet lors de la modification d'un modificateur Physique
+- Un problème a été résolu qu'il était difficile de distinguer de l'élément parent, car la marge avant de l'élément enfant de 2e niveau était étrange dans l'interface hiérarchique.
+- Un bug est corrigé que la barre de défilement verticale de l'interface utilisateur de la chronologie d'animation ne fonctionne pas normalement lors de l'utilisation de la souris
+- Un problème est résolu: les "images clés de boucle automatique" ne sont pas actualisées lors du changement de la longueur d'animation ou de l'option de boucle
+- Un problème est résolu: "Annuler" ne fonctionne pas lors du changement de la longueur d'animation ou de l'option de boucle
+- Une faute de frappe est corrigée là où les propriétés vectorielles de l'élément Transform sont sorties en tant que (X, X) pour être sorties en tant que (X, Y) dans l'interface utilisateur de la propriété d'image clé de l'animation
+- Un problème est résolu: la "cuisson" n'est pas traitée correctement lorsque la propriété personnalisée en tant que type de texture est créée dans la bibliothèque de matériaux et que "Texture par image" est sélectionné.
+
+
+
+-----------------------------------------
+(독일어)
+<size=16>AnyPortrait-Aktualisierungsprotokoll v1.2.3</size>
+(Build 25. April 2020)
+
+
+<size=13>Verbesserungen</size>
+
+- <color=blue>Verbesserungen und Probleme bei der Animationsverarbeitung</color> behoben
+    Der reibungslose Übergang zwischen 2 Animationsclips wird verbessert
+    Deutlich verbesserte Handhabung im Zusammenhang mit Übergängen und Überlagerungen von Animationsclips
+    Es wurde ein Problem behoben, das dazu führte, dass die Steuerparameter beim Umschalten der Animationsclips zu schnell umgeschaltet wurden
+    Es wurde das Problem behoben, dass der negative Wert eines ganzzahligen Steuerparameters in der Animation nicht normal berechnet wird
+    Es wurde ein Problem behoben, durch das das Mischen nicht ordnungsgemäß funktioniert, wenn Clips wiederholt in der Timeline von Unity abgespielt werden
+    Wenn Sie "Timeline Simulator" verwenden, der eine Vorschau der Zeitleiste von Unity anzeigt, wird die Vorschau verbessert, auch wenn das Spiel nicht im Editor ausgeführt wird.
+    <color=red>(Weitere Informationen finden Sie auf unserer Homepage)</color>
+
+- Verbesserung der <color=blue>Editor-Benutzeroberfläche</color>
+    Während der Bearbeitung des Modifikators wird verhindert, dass in der Hierarchie-Benutzeroberfläche der Netzgruppe horizontal gescrollt wird
+    Es wurde verbessert, dass die Reihenfolge in der Hierarchie-Benutzeroberfläche auch für die Registerkarte Controller gilt
+    Der obere Bereich und die Ränder der Modifikator-Benutzeroberfläche wurden verbessert, um intuitiver zu sein
+    Eine Funktion funktioniert normal, auch wenn sich der Cursor beim Ziehen außerhalb des Arbeitsbereichs bewegt
+    Wenn sich die Optionen im Einstellungsdialog von den Standardwerten unterscheiden, werden die Farben unterschiedlich angezeigt
+    Beim Wiederherstellen der Standardeinstellungen wird eine Warnmeldung angezeigt
+    Rücktaste und Löschen werden in Mac OS X nicht unterschieden, sodass zwei Tasten als dieselbe Verknüpfung erkannt werden
+    "Trash-Symbol" wird allen Schaltflächen zum Trennen / Löschen hinzugefügt
+    Verbesserte Benutzeroberfläche auf der rechten Seite des Animationsclips
+    Die Benutzeroberfläche der Animationszeitleiste kann durch Drücken der Strg-Taste und Scrollen des Mausrads vergrößert werden.
+    <color=red>(Weitere Informationen finden Sie auf unserer Homepage)</color>
+
+- <color=blue>Optimierung der Editor- und Spielleistung</color>
+     Das Problem wurde behoben, das zu unnötiger Speichernutzung und schlechter Leistung führte, als die Hierarchie-Benutzeroberfläche aktualisiert wurde
+     Die Leistung in vielen Prozessen, z. B. beim Starten von Modifikatoren, beim Auswählen von Objekten in der Hierarchie und beim Hinzufügen und Löschen von Netzen in Modifikatoren, wird verbessert
+     Das Problem wurde verbessert, dass sich die Verarbeitungszeit des Editors erhöht, wenn viele Animationsclips vorhanden sind
+     Wenn Sie ein Porträt zum ersten Mal in den Editor laden, wird ein Popup angezeigt, in dem der Ladevorgang angezeigt wird (außer beim Öffnen des Editors im Inspektor).
+     Die Verarbeitungsgeschwindigkeit wird verbessert, indem die unnötige Verarbeitung nicht gerenderter Netze optimiert wird
+     <color=red>(Weitere Informationen finden Sie auf unserer Homepage)</color>
+
+- Verbesserte Benutzerfreundlichkeit von <color=blue>Knochen und Takelage</color>
+    Im Einstellungsdialog können Sie die Größe der Knochen festlegen und festlegen, ob die Größe entsprechend dem Bildschirmzoom zunimmt
+    Im Arbeitsbereich wird die Farbe des Knochenumrisses so geändert, dass sie sich von der Knochenfarbe unterscheidet
+    Wenn im Arbeitsbereich ein Knochen ausgewählt wird, ist der Umriss des Knochens leicht glänzend, um leicht zu unterscheiden
+    "Nadelform", die neue Form der Knochen, wird hinzugefügt
+    Es ist einfacher, Knochen auszuwählen, wenn Sie mit der Maus klicken als zuvor
+    In der Benutzeroberfläche für die Knocheneinstellung der Netzgruppe werden voreingestellte Schaltflächen zum einfachen Einstellen der Farbe des Knochens hinzugefügt
+    Wenn die Option für Knochen so eingestellt ist, dass die Farbe des neuen Knochens der des Elternteils ähnlich ist, ist seine Farbe dem Elternteil nicht zu sehr ähnlich als zuvor
+    Die Option "Lebendig" wurde hinzugefügt, um die Rigging-Abstufung anzuzeigen, die aus verschiedenen Farben besteht
+    Die Option wird hinzugefügt, um den ausgewählten Bereich der kreisförmigen Takelagegewichte des Scheitelpunkts leicht zu unterscheiden
+    Die Option wird hinzugefügt, um die Größe der kreisförmigen Rigging-Gewichte des Scheitelpunkts festzulegen
+    Wenn der Wert des Gewichts in den kreisförmigen Takelagegewichten des Scheitelpunkts klein ist, ist er schwer zu erkennen, sodass er separat in der Mitte des Kreises angezeigt wird
+    Der Klickbereich des kreisförmigen Rigging-Gewichts von Vertex ist größer als zuvor
+    Die Funktion wird hinzugefügt, um durchscheinende oder nicht versteckte Knochen anzuzeigen
+    Tastenkombinationen werden hinzugefügt, um das Rigging-Gewicht anzupassen (Z, X : Änderung um 0,02, Shift + Z, X : Änderung um 0,05)
+    Wenn Sie beim Bearbeiten der Takelage die Strg-, Umschalt- oder Alt-Taste gedrückt halten, werden keine Bones ausgewählt
+    Zum Löschen von Bones im Einstellungsbildschirm wird eine Tastenkombination hinzugefügt (Löschtaste).
+    <color=red>(Weitere Informationen finden Sie auf unserer Homepage)</color>
+
+- Wenn Sie Objekte mit der Option Farbe des Modifikators ausblenden oder anzeigen, wird eine Option zum sofortigen Umschalten hinzugefügt, ohne durchscheinend zu sein
+- Es wurde eine Option zum Ändern des Installationspfads für das AnyPortrait-Paket <color=red>(Weitere Informationen finden Sie auf unserer Homepage)</color>
+- Die Leistung im Spiel wird verbessert, wenn mehrere Charaktere mit festen FPS platziert und ausgeführt werden, indem die Option Wichtig deaktiviert wird
+- Es wurde verbessert, sodass die temporäre Sichtbarkeit auch dann erhalten bleibt, wenn Sie eine Aktion ausführen, wenn die Option ausgewählt ist, die temporäre Sichtbarkeit von Netzen und Knochen beizubehalten
+- Seit Unity 2019.3 ist es aufgrund der Position des Tooltips schwierig, die Schaltfläche zu drücken, sodass der Tooltip in dieser Version nicht mehr angezeigt wird
+- Der Text für Nicht-Backen wird in der Inspector-Benutzeroberfläche geändert
+
+
+
+<size=13>Problem behoben</size>
+
+- Es wurde ein Problem behoben, bei dem die Zuordnung zu Sub-Mesh-Gruppen und ihren untergeordneten Meshes beim Öffnen einer PSD-Datei freigegeben wurde
+- Es wurde ein Fehler behoben, durch den die Sichtbarkeitsinformationen (Augensymbol) von Objekten in der Subnetzgruppe nicht ordnungsgemäß aktualisiert wurden
+- Es wurde ein Problem behoben, bei dem beim Bearbeiten des Modifikators ein Fehlerprotokoll der GUI-Steuerung aufgetreten ist
+- Es wurde ein Fehler behoben, durch den der Editor nicht ordnungsgemäß funktioniert, wenn keine Root-Einheit registriert ist und der Editor direkt im Inspektor geöffnet wird
+- Es wurde ein Fehler behoben, durch den beim Rückgängigmachen alle Daten beschädigt wurden, wenn die Zielnetzgruppe der Animation in die übergeordnete Netzgruppe geändert und die Daten initialisiert wurden
+- Es wurde ein Fehler behoben, durch den das Backen aufgrund der Daten fehlgeschlagen ist, als die Sub-Mesh-Gruppe entfernt wurde, nachdem sie aus den Meshs der Eltern entfernt wurde
+- Es wurde ein Problem behoben, bei dem beim Bearbeiten des Modifikators gleichzeitig ein Bone, ein Netz oder eine Teilnetzgruppe über die Hierarchie einer Netzgruppe ausgewählt werden kann
+- Es wurde ein Fehler behoben, dass das FFD-Tool nicht freigegeben wird, wenn während der Verwendung des FFD-Tools ein anderes Objekt ausgewählt wird
+- Es wurde ein Problem behoben, bei dem beim Auswählen eines anderen Objekts während der Bearbeitung des physischen Modifikators ein GUI-Fehlerprotokoll aufgetreten ist
+- Es wurde das Problem behoben, dass die oberste Benutzeroberfläche beim Auswählen eines Objekts beim Bearbeiten eines physischen Modifikators seltsam angezeigt wurde
+- Es wurde ein Problem behoben, bei dem es schwierig war, vom übergeordneten Element zu unterscheiden, da der vordere Rand des untergeordneten Elements der 2. Ebene in der Hierarchie-Benutzeroberfläche seltsam war
+- Es wurde ein Fehler behoben, durch den die vertikale Bildlaufleiste der Benutzeroberfläche der Animationszeitleiste bei Verwendung der Maus nicht normal funktioniert
+- Es wurde das Problem behoben, dass "Auto-Loop-Keyframes" beim Ändern der Animationslänge oder der Loop-Option nicht aktualisiert werden
+- Es wurde ein Problem behoben, bei dem "Rückgängig" beim Ändern der Animationslänge oder der Schleifenoption nicht funktioniert
+- Ein Tippfehler wurde behoben, bei dem die Vektoreigenschaften des Transformationselements als (X, X) ausgegeben werden und in der Benutzeroberfläche der Keyframe-Eigenschaft der Animation als (X, Y) ausgegeben werden
+- Es wurde das Problem behoben, dass "Backen" nicht ordnungsgemäß verarbeitet wird, wenn die benutzerdefinierte Eigenschaft als Texturtyp in der Materialbibliothek erstellt und "Textur pro Bild" ausgewählt wird.
+
+
+
+-----------------------------------------
+(스페인어)
+<size=16>AnyPortrait Update Log v1.2.3</size>
+(Construido el 25 de abril de 2020)
+
+
+<size=13>Mejoras</size>
+
+- <color=blue>Procesamiento de animación</color> mejoras y problemas solucionados
+    Se ha mejorado la transición suave entre 2 clips de animación.
+    Manejo general significativamente mejorado relacionado con las transiciones y capas de clips de animación
+    Se solucionó un problema que causaba que los parámetros de control se cambiaran demasiado rápido cuando se cambiaban los clips de animación.
+    Se solucionó el problema de que el valor negativo de un parámetro de control de enteros en la animación no se calcula normalmente
+    Se solucionó un problema por el cual la fusión no funcionaba correctamente cuando los clips se reproducían repetidamente en la línea de tiempo de Unity
+    Cuando se usa "Timeline Simulator", que muestra una vista previa de la línea de tiempo de Unity, se mejora para obtener una vista previa incluso cuando el juego no se ejecuta en el editor.
+    <color=red>(Para obtener más información, visite nuestra página de inicio)</color>
+
+- Mejora de <color=blue>Editor UI</color>
+    Se evita que se desplace horizontalmente en la interfaz de usuario de jerarquía del grupo de malla mientras se edita el modificador
+    Se ha mejorado que el orden en la interfaz de usuario de jerarquía también se aplique a la pestaña Controlador
+    El área superior y los márgenes de la interfaz de usuario del modificador se han mejorado para ser más intuitivos.
+    Una función funciona normalmente incluso si el cursor se mueve fuera del espacio de trabajo mientras arrastra
+    Si las opciones en el cuadro de diálogo de configuración son diferentes de los valores predeterminados, los colores se muestran de manera diferente
+    Aparece un mensaje de advertencia al restablecer la configuración predeterminada
+    Retroceso y Eliminar no se distinguen en Mac OSX, por lo que se reconocen dos teclas como el mismo acceso directo
+    El "icono de la papelera" se agrega a todos los botones Separar / Eliminar
+    Interfaz de usuario mejorada en el lado derecho del clip de animación
+    La interfaz de usuario de la línea de tiempo de la animación se puede ampliar presionando la tecla Ctrl y desplazando la rueda del mouse.
+    <color=red>(Para obtener más información, visite nuestra página de inicio)</color>
+
+- <color=blue>Editor y optimización del rendimiento del juego</color>
+    Se solucionó el problema que causaba el uso innecesario de memoria y un bajo rendimiento cuando se actualizaba la interfaz de usuario de la jerarquía
+    Se mejora el rendimiento en muchos procesos, como al iniciar modificadores, seleccionar objetos en la Jerarquía y agregar y eliminar mallas en modificadores
+    Se ha mejorado el problema de que el tiempo de procesamiento del editor aumenta cuando hay muchos clips de animación.
+    Al cargar un Retrato por primera vez en el editor, se muestra una ventana emergente para ver el proceso de carga (excepto al abrir el editor en el Inspector)
+    La velocidad de procesamiento se mejora al optimizar el procesamiento innecesario de mallas no renderizadas
+    <color=red>(Para obtener más información, visite nuestra página de inicio)</color>
+
+- Mejora de la usabilidad de <color=blue>Huesos y aparejos</color>
+    En el cuadro de diálogo de configuración, puede establecer el tamaño de los huesos y si el tamaño aumenta de acuerdo con el zoom de la pantalla
+    En el espacio de trabajo, el color del contorno del hueso cambia para ser diferente del color del hueso.
+    Cuando se selecciona un hueso en el espacio de trabajo, el contorno del hueso es ligeramente brillante para que sea fácil de distinguir.
+    Se agrega "forma de aguja", que es la nueva forma de los huesos
+    Es más fácil seleccionar huesos al hacer clic con el mouse que antes
+    En la interfaz de usuario de configuración de hueso del grupo de malla, se agregan botones preestablecidos para establecer fácilmente el color del hueso
+    Si la opción de huesos está configurada para que el color del hueso nuevo sea similar al del padre, su color no es demasiado similar al del padre que antes.
+    Se agrega la opción "Vivid" para mostrar la gradación de aparejo compuesta de diferentes colores
+    La opción se agrega para hacer que el área seleccionada de los pesos de aparejo circulares del vértice sea fácil de distinguir
+    La opción se agrega para establecer el tamaño de los pesos de aparejo circulares del vértice
+    Si el valor del peso en los pesos de aparejo circulares del vértice es pequeño, es difícil de ver, por lo que se muestra por separado en el centro del círculo
+    El área de clic del peso de aparejo circular de Vertex es más grande que antes
+    La característica se agrega para mostrar translúcida u ocultar los huesos no aparejados
+    Se agregan teclas de acceso directo para ajustar el peso del aparejo (Z, X: cambiar en 0.02, Shift + Z, X: cambiar en 0.05)
+    Mientras mantiene presionadas las teclas Ctrl, Shift o Alt en el aparejo de edición, los huesos no se seleccionan
+    Se agrega una tecla de acceso directo para eliminar huesos en la pantalla de configuración (tecla Eliminar)
+    <color=red>(Para obtener más información, visite nuestra página de inicio)</color>
+
+- Al ocultar o mostrar objetos con la opción Color del modificador, se agrega una opción para cambiar inmediatamente sin ser translúcido
+- Se agrega una opción para cambiar la ruta de instalación del paquete AnyPortrait <color=red>(Para obtener más información, visite nuestra página de inicio)</color>
+- El rendimiento en el juego mejora al colocar y ejecutar múltiples personajes con FPS fijo al desactivar la opción Importante
+- Se mejora para que la visibilidad temporal se mantenga incluso si realiza alguna acción, si se selecciona la opción de mantener la visibilidad temporal de mallas y huesos
+- Desde Unity 2019.3, se hace difícil presionar el botón debido a la ubicación de la información sobre herramientas, por lo que la información sobre herramientas no aparece en esa versión
+- Se cambia el texto sobre no hornear en la interfaz de usuario del inspector
+
+
+
+<size=13>Problema solucionado</size>
+
+- Se solucionó un problema de que la asignación a grupos de submallas y sus mallas secundarias se liberaba al abrir un archivo PSD
+- Se solucionó un error por el cual la información de visibilidad (ícono de ojo) de los objetos en el grupo de submallas no se actualizaba correctamente
+- Se solucionó un problema por el que se producía un registro de errores de control de la GUI al editar el modificador
+- Se corrigió un error que indica que el editor no funciona correctamente, cuando no hay una unidad raíz registrada y el editor se abre directamente en el Inspector
+- Se corrigió un error que al deshacer causaba que todos los datos se corrompieran al cambiar el grupo de malla objetivo de la animación al grupo de malla principal, inicializando los datos
+- Se corrigió un error que indicaba que el Horneado fallaba debido a los datos cuando se eliminó el grupo de submallas después de ser manipulado de las mallas de los padres
+- Se solucionó un problema que al seleccionar el hueso, una malla o un grupo de malla secundaria al mismo tiempo a través de la Jerarquía de un grupo de malla es posible al editar el modificador
+- Se corrigió un error que indica que la herramienta FFD no se libera cuando se selecciona otro objeto mientras se usa la herramienta FFD
+- Se solucionó un problema por el que se producía un registro de error de GUI al seleccionar otro objeto durante la edición del modificador físico
+- Se solucionó un problema por el que la IU superior se mostraba de forma extraña al seleccionar un objeto mientras se editaba un modificador de Física.
+- Se solucionó un problema que era difícil de distinguir del elemento primario porque el margen frontal del elemento secundario de segundo nivel era extraño en la interfaz de usuario de la jerarquía
+- Se corrigió un error que indica que la barra de desplazamiento vertical de la interfaz de usuario de la línea de tiempo de la animación no funciona normalmente cuando se usa el mouse
+- Se solucionó un problema por el que los "fotogramas clave de bucle automático" no se actualizaban al cambiar la duración de la animación o la opción de bucle
+- Se solucionó un problema por el cual "Deshacer" no funcionaba al cambiar la duración de la animación o la opción de bucle
+- Un error tipográfico se corrige donde las propiedades del vector del elemento Transformar se generan como (X, X) para emitirse como (X, Y) en la IU de la propiedad de fotograma clave de la animación
+- Se solucionó un problema por el cual "Hornear" no se procesaba correctamente cuando la propiedad personalizada como el tipo de textura se crea en la Biblioteca de materiales y se selecciona "Textura por imagen".
+
+
+
+-----------------------------------------
+(이탈리아어)
+<size=16>Registro aggiornamenti AnyPortrait v1.2.3</size>
+(Build 25 aprile 2020)
+
+
+<size=13>Miglioramenti</size>
+
+- Miglioramenti e problemi di <color=blue>Elaborazione animazione</color>
+    Migliorata la transizione regolare tra 2 clip di animazione
+    Significativamente migliorata la gestione generale relativa alle transizioni e alla stratificazione delle clip di animazione
+    È stato risolto un problema per cui i parametri di controllo venivano commutati troppo rapidamente quando venivano commutate le clip di animazione
+    È stato risolto il problema per cui il valore negativo di un parametro di controllo intero nell'animazione non viene calcolato normalmente
+    È stato risolto il problema che la fusione non funzionava correttamente quando le clip vengono riprodotte ripetutamente nella linea temporale di Unity
+    Quando si utilizza "Timeline Simulator", che visualizza l'anteprima della Cronologia di Unity, viene migliorata l'anteprima anche quando il gioco non è in esecuzione nell'editor.
+    <color=red>(Per maggiori informazioni, visita la nostra homepage)</color>
+
+- Miglioramento dell'interfaccia utente <color=blue>Editor</color>
+    Non è possibile scorrere orizzontalmente nell'interfaccia utente della gerarchia del gruppo mesh durante la modifica del modificatore
+    È stato migliorato che l'ordine nell'interfaccia utente della gerarchia si applichi anche alla scheda Controller
+    L'area superiore e i margini dell'interfaccia utente del modificatore sono stati migliorati per essere più intuitivi
+    Una funzione funziona normalmente anche se il cursore si sposta all'esterno dell'area di lavoro durante il trascinamento
+    Se le opzioni nella finestra di dialogo delle impostazioni sono diverse dai valori predefiniti, i colori vengono visualizzati in modo diverso
+    Viene visualizzato un messaggio di avviso quando si ripristinano le impostazioni predefinite
+    Backspace ed Delete non si distinguono in Mac OSX, quindi due tasti sono riconosciuti come lo stesso collegamento
+    L'icona "Cestino" viene aggiunta a tutti i pulsanti Stacca / Elimina
+    Interfaccia utente migliorata sul lato destro della clip di animazione
+    L'interfaccia utente della sequenza temporale dell'animazione può essere ingrandita premendo il tasto Ctrl e facendo scorrere la rotellina del mouse.
+    <color=red>(Per maggiori informazioni, visita la nostra homepage)</color>
+
+- <color=blue>Ottimizzazione delle prestazioni dell'editor e del gioco</color>
+    Il problema è stato risolto e ciò ha causato un utilizzo non necessario della memoria e scarse prestazioni durante l'aggiornamento dell'interfaccia utente della gerarchia
+    Le prestazioni in molti processi, come l'avvio di modificatori, la selezione di oggetti in Gerarchia e l'aggiunta e l'eliminazione di mesh nei modificatori sono migliorate
+    Il problema è stato migliorato quando aumenta il tempo di elaborazione dell'editor quando ci sono molte clip di animazione
+    Quando si carica un Ritratto per la prima volta nell'editor, viene visualizzato un popup per vedere il processo di caricamento (tranne quando si apre l'editor nell'Inspector)
+    La velocità di elaborazione viene migliorata ottimizzando l'elaborazione non necessaria di mesh non renderizzate
+    <color=red>(Per maggiori informazioni, visita la nostra homepage)</color>
+
+- Migliore usabilità di <color=blue>Bones and Rigging</color>
+    Nella finestra di dialogo delle impostazioni, è possibile impostare la dimensione delle ossa e se la dimensione aumenta in base allo zoom dello schermo
+    Nell'area di lavoro, il colore del contorno dell'osso viene modificato per essere diverso dal colore dell'osso
+    Quando si seleziona un osso nell'area di lavoro, il contorno dell'osso è leggermente lucido per essere facilmente distinguibile
+    Viene aggiunta la "forma dell'ago", ovvero la nuova forma delle ossa
+    È più facile selezionare le ossa facendo clic con il mouse rispetto a prima
+    Nell'interfaccia utente di impostazione dell'osso del gruppo mesh, vengono aggiunti pulsanti preimpostati per impostare facilmente il colore dell'osso
+    Se l'opzione delle ossa è impostata in modo che il nuovo colore dell'osso sia simile al genitore, il suo colore non è molto simile al genitore di prima
+    L'opzione "Vivido" viene aggiunta per mostrare la gradazione del rigging composta da colori diversi
+    L'opzione viene aggiunta per rendere facile distinguere l'area selezionata dei pesi circolari del vertice
+    È stata aggiunta l'opzione per impostare la dimensione dei pesi circolari del vertice
+    Se il valore del peso nei pesi di rigging circolare del vertice è piccolo, è difficile da vedere, quindi viene visualizzato separatamente al centro del cerchio
+    L'area di clic del peso di rigging circolare di Vertex è più ampia di prima
+    La funzione viene aggiunta per mostrare traslucido o nascondere le ossa non rigging
+    I tasti di scelta rapida vengono aggiunti per regolare il peso del rigging (Z, X: modifica di 0,02, Shift + Z, X: modifica di 0,05)
+    Tenendo premuto il tasto Ctrl, Maiusc o Alt durante la modifica del rigging, le ossa non vengono selezionate
+    Viene aggiunto un tasto di scelta rapida per eliminare le ossa nella schermata delle impostazioni (tasto Elimina)
+    <color=red>(Per maggiori informazioni, visita la nostra homepage)</color>
+
+- Quando si nascondono o mostrano oggetti con l'opzione Colore del modificatore, viene aggiunta un'opzione per passare immediatamente senza essere traslucido
+- È stata aggiunta un'opzione per modificare il percorso di installazione del pacchetto AnyPortrait <color=red>(Per maggiori informazioni, visita la nostra homepage)</color>
+- Le prestazioni nel gioco sono migliorate quando si posizionano e si eseguono più personaggi con FPS fisso disattivando l'opzione Importante
+- È stato migliorato in modo da mantenere la visibilità temporanea anche se si esegue qualsiasi azione, se è selezionata l'opzione per mantenere temporaneamente la visibilità di maglie e ossa
+- Da Unity 2019.3, diventa difficile premere il pulsante a causa della posizione della descrizione comando, quindi la descrizione comando non viene visualizzata da quella versione
+- Il testo viene modificato in merito a Non-Bake nell'interfaccia utente di Inspector
+
+
+
+<size=13>Risolto il problema</size>
+
+- È stato risolto un problema relativo al rilascio della mappatura su gruppi di mesh secondarie e mesh secondarie all'apertura di un file PSD
+- È stato corretto un bug per il quale le informazioni sulla visibilità (icona a forma di occhio) degli oggetti nel gruppo di mesh secondarie non venivano aggiornate correttamente
+- È stato risolto un problema relativo al registro degli errori del controllo GUI durante la modifica del modificatore
+- È stato corretto un bug per cui l'editor non funzionava correttamente, quando non vi è alcuna unità radice registrata e l'editor viene aperto direttamente in Inspector
+- È stato corretto un bug per cui l'annullamento causava il danneggiamento di tutti i dati quando si modificava il gruppo mesh di destinazione dell'animazione nel gruppo mesh padre, inizializzando i dati
+- È stato corretto un bug per cui il Bake non riusciva a causa dei dati quando il gruppo sotto-mesh veniva rimosso dopo essere stato truccato dalle maglie del genitore
+- È stato risolto un problema per cui è possibile selezionare contemporaneamente un osso, una mesh o un gruppo di mesh secondarie tramite la Gerarchia di un gruppo di mesh durante la modifica del modificatore
+- È stato corretto un bug per cui lo strumento FFD non veniva rilasciato quando si seleziona un altro oggetto durante l'utilizzo dello strumento FFD
+- È stato risolto un problema relativo al registro degli errori della GUI durante la selezione di un altro oggetto durante la modifica del modificatore fisico
+- È stato risolto il problema che l'interfaccia utente principale veniva visualizzata in modo strano durante la selezione di un oggetto durante la modifica di un modificatore fisico
+- È stato risolto un problema per cui era difficile distinguere dall'elemento padre poiché il margine anteriore dell'elemento figlio di 2 ° livello era strano nell'interfaccia utente della gerarchia
+- È stato corretto un bug per cui la barra di scorrimento verticale dell'interfaccia utente della sequenza temporale dell'animazione non funziona normalmente quando si utilizza il mouse
+- È stato risolto il problema che i "Fotogrammi chiave Auto-loop" non vengono aggiornati quando si modifica la lunghezza dell'animazione o l'opzione loop
+- È stato risolto il problema che "Annulla" non funzionava quando si modifica la lunghezza dell'animazione o l'opzione loop
+- È stato corretto un errore di battitura in cui le proprietà vettoriali dell'elemento Trasforma vengono emesse come (X, X) per essere emesse come (X, Y) nell'interfaccia utente della proprietà del fotogramma chiave dell'animazione
+- È stato risolto il problema che "Bake" non viene elaborato correttamente quando la proprietà personalizzata come tipo di trama viene creata nella Libreria dei materiali e "Trama per immagine" è selezionato.
+
+
+
+-----------------------------------------
+(덴마크어)
+<size=16>AnyPortrait Update Log v1.2.3</size>
+(Byg 25. april 2020)
+
+
+<size=13>Forbedringer</size>
+
+- <color=blue>Animationsbehandling</color> forbedringer og problemer løst
+    Glat overgang mellem 2 animationsklip forbedres
+    Betydelig forbedret samlet håndtering relateret til overgange og lagdeling af animationsklip
+    Der løses et problem, der forårsagede, at kontrolparametrene skiftes for hurtigt, når animationsklemmerne skiftes
+    Der løses et problem, hvor den negative værdi af en heltalskontrolparameter i animationen ikke beregnes normalt
+    Et problem er løst, at blanding ikke fungerer korrekt, når klip afspilles gentagne gange i Unitys tidslinje
+    Når du bruger "Tidslinjesimulator", der forhåndsviser Unitys tidslinje, forbedres det til at få vist preview, selv når spillet ikke kører i editoren.
+    <color=red>(For mere information, se venligst vores hjemmeside)</color>
+
+- Forbedring af <color=blue>Editor UI</color>
+    Det forhindres at rulle vandret i hierarki-brugergrænsefladen for mesh-gruppen under redigering af modifikatoren
+    Det forbedres, at ordren i hierarki-brugergrænsefladen også gælder på fanen Controller
+    Det øverste område og marginer på det ændrede UI forbedres for at være mere intuitivt
+    En funktion fungerer normalt, selvom markøren bevæger sig uden for arbejdsområdet, mens du trækker
+    Hvis indstillingerne i indstillingsdialogen er forskellige fra standardværdierne, vises farverne anderledes
+    Advarselsmeddelelsen vises, når indstillingerne gendannes til standard
+    Backspace og Delete skilles ikke i Mac OSX, så to taster genkendes som den samme genvej
+    "Papirkurv-ikonet" føjes til alle knapper til fjernelse / sletning
+    Forbedret brugergrænseflade til højre for animationsklippet
+    UI for animationens tidslinje kan zoomes ved at trykke på Ctrl-tasten og rulle med musehjulet.
+    <color=red>(For mere information, se venligst vores hjemmeside)</color>
+
+- <color=blue>Editor og spilpræstationoptimering</color>
+    Problemet er rettet, der forårsagede unødvendig hukommelsesbrug og dårlig ydeevne, når Hierarchy UI blev opdateret
+    Ydeevnen i mange processer, f.eks. Når du starter modifikatorer, vælger objekter i hierarki og tilføjer og sletter masker i modifikatorer forbedres
+    Problemet forbedres, at redaktørens behandlingstid øges, når der er mange animationsklip
+    Når du indlæser et portræt for første gang i editoren, vises en pop-up for at se indlæsningsprocessen (undtagen når du åbner editoren i inspektøren)
+    Behandlingshastigheden forbedres ved at optimere unødvendig behandling af ikke-gengivne masker
+    <color=red>(For mere information, se venligst vores hjemmeside)</color>
+
+- Forbedret brugervenlighed af <color=blue>Bones and Rigging</color>
+    I indstillingsdialogen kan du indstille størrelsen på knogler, og om størrelsen øges i henhold til skærmzoomen
+    I arbejdsområdet ændres farven på knoglens kontur til at være forskellig fra knoglens farve
+    Når der vælges en knogle i arbejdsområdet, er knoglens kontur let skinnende for at være let at skelne
+    "Nåleform", som er den nye form på knogler tilføjes
+    Det er lettere at vælge knogler, når du klikker med musen end før
+    I knoglens indstillingsgrænseflade for maskegruppen tilføjes forudindstillede knapper til let at indstille farven på knoglen
+    Hvis indstillingen med knogler er indstillet til, at den nye knogles farve svarer til overordnede, ligner dens farve ikke alt for meget den overordnede end før
+    "Vivid" er tilføjet for at vise rigging gradation sammensat af forskellige farver
+    Funktionen tilføjes for at gøre det valgte område af toppunktets cirkulære riggevægte let at skelne
+    Funktionen tilføjes for at indstille størrelsen på toppunktets cirkulære riggevægte
+    Hvis værdien af ​​vægten i toppunktets cirkulære riggevægte er lille, er det vanskeligt at se, så den vises separat i midten af ​​cirklen
+    Vertex's cirkulære riggevægts klikfelt er større end før
+    Funktionen tilføjes for at vise gennemsigtige eller skjule de ikke-riggende knogler
+    Genvejstaster tilføjes for at justere riggvægt (Z, X : skift med 0,02, Shift + Z, X: skift med 0,05)
+    Mens du holder Ctrl-, Shift- eller Alt-tasten nede i redigering af rigging, vælges ikke knogler
+    En genvejstast tilføjes til sletning af knogler i indstillingsskærmen (Delete-tast)
+    <color=red>(For mere information, se venligst vores hjemmeside)</color>
+
+- Når du skjuler eller viser objekter med farveindstillingen i modificeren, tilføjes en mulighed for at skifte øjeblikkeligt uden at være gennemskinnelig
+- Der tilføjes en mulighed for at ændre installationsvejen til AnyPortrait-pakken <color=red>(For mere information, se venligst vores hjemmeside)</color>
+- Ydeevne i spillet forbedres, når du placerer og kører flere karakterer med Fixed FPS ved at slå funktionen Vigtigt fra
+- Det forbedres, så den midlertidige synlighed opretholdes, selvom du gør noget, hvis muligheden for at holde midlertidigt synlighed af masker og knogler er valgt
+- Siden Unity 2019.3 bliver det vanskeligt at trykke på knappen på grund af placeringen af ​​værktøjstippen, så værktøjstippen vises ikke fra den version
+- Teksten ændres om ikke-bage i Inspector UI
+
+
+
+<size=13>Faste problem</size>
+
+- Et problem er rettet, at kortlægningen til undermesh-grupper og deres barnesider blev frigivet ved åbning af en PSD-fil
+- Der løses en fejl, så synlighedsinfo (øjeikon) for objekter i undermesh-gruppen ikke opdateres korrekt
+- Et problem er løst, hvor GUI Control-fejlloggen opstår under redigering af modifikator
+- Der løses en fejl, som redaktøren ikke fungerer korrekt, når der ikke er nogen registreret rodenhed, og redaktøren åbnes direkte i inspektøren
+- Der er rettet en fejl, som fortrydning forårsagede, at alle data blev beskadiget, når animationsmålgruppens målnet blev ændret til den overordnede mesh-gruppe ved at initialisere dataene
+- Der er rettet en fejl, hvor Bake mislykkes på grund af dataene, da undermaskegruppen blev fjernet efter at være rigget fra forældrenes masker
+- Et problem er løst, at valg af en knogle, en mesh eller en undermesh-gruppe på samme tid gennem hierarki af en mesh-gruppe er mulig, når du redigerer modifikatoren
+- Der løses en fejl, så FFD-værktøjet ikke frigives, når der vælges et andet objekt, mens du bruger FFD-værktøjet
+- Der løses et problem, hvor GUI-fejlloggen opstår, når du vælger et andet objekt under redigering af fysisk modifikator
+- Et problem er løst, hvor top-UI'en blev vist underligt, når du vælger et objekt, mens du redigerede en fysisk modifikator
+- Et problem er løst, at det var vanskeligt at skelne fra det overordnede emne, fordi frontmargenen på det andet niveau underordnede element var underligt i hierarki
+- Der er rettet en fejl, så den lodrette rullebjælke i animationens tidslinje UI ikke fungerer normalt, når du bruger musen
+- Der løses et problem, hvor "Auto-loop keyframes" ikke opdateres, når du ændrer animationslængden eller loop-indstillingen
+- Der løses et problem, hvor "Fortryd" ikke fungerer, når du ændrer animationslængden eller loop-indstillingen
+- En trykfejl er fast, hvor vektoregenskaberne for Transform-elementet udsendes som (X, X), der skal udsendes som (X, Y) i animationens keyframe-egenskab UI
+- Der løses et problem, hvor "Bage" ikke behandles korrekt, når den brugerdefinerede egenskab som teksturtype oprettes i materialebiblioteket og "Tekstur pr. Billede" er valgt.
+
+
+
+-----------------------------------------
+(일본어)
+<size=16> AnyPortrait更新ログv1.2.3</size>
+（2020年4月25日ビルド）
+
+<size=13>改善点</size>
+
+ - <color=blue>アニメーション実行</color>改善と問題を修正
+    2つのアニメーションクリップが以前よりも自然に切り替わるように改善
+    アニメーションクリップの転換とレイヤの関連処理を全体的に大幅に改善
+    アニメーションクリップが切り替わるとき、コントロールパラメータが速すぎる転換される問題を修正
+    アニメーションで整数型（Integer）のコントロールパラメータの値が負の値である場合には、通常の演算ができない問題を修正
+    UnityのTimeline機能使用時のクリップが繰り返し再生されるブレンドが正常にされない問題を修正
+    UnityのTimeline機能をプレビュー「Timeline Simulator」使用時、エディタでゲームが実行していないときでも、プレビューになるように改善
+    <color=red>（詳細はホームページを確認してください）</color>
+
+- <color=blue>エディタのUI</color>改善
+    モディファイヤを編集する状態でメッシュグループのサブHierarchy UIで水平スクロールがないように変更
+    Hierarchy UIでの順序が制御パラメータタブにも適用されるように改善
+    モディファイヤUIの上部領域と余白を調整して、情報がよりよく見えるように改善
+    マウスをドラッグしてから、ワークスペースの外にカーソルが移動しても正常に動作するように改善
+    設定ダイアログのオプションがデフォルトと異なる場合は、色が異なって出力されるように変更
+    設定をデフォルトに戻すときに、警告メッセージが登場
+    Mac OSXで「Backspace」と「Delete」が区分されていませんので、二つのキーを同じショートカットとして認識するように変更
+    削除、Detachボタンにゴミ箱のアイコンをすべて追加
+    アニメーションクリップの右側UIを改善
+    アニメーションタイムラインUIの拡大/縮小をCtrlキーを押しながらマウスホイールをスクロールしても可能なように改善
+    <color=red>（詳細はホームページを確認してください）</color>
+
+ - <color=blue>エディタと実行パフォーマンスの最適化</color>
+    Hierarchy UIが更新されるときに不必要にメモリが使用されたり、パフォーマンスが低下する問題を修正
+    モディファイヤ編集開始および終了時、Hierarchyのオブジェクトの選択時に、メッシュをモディファイヤに追加、削除、市など多くの過程で実行速度が向上しように改善
+    アニメーションクリップの数が多ければ、エディタの処理時間が急激に増加する問題を修正
+    エディタでPortraitを最初にロードするとき、ロードプロセスを見ることができるポップアップが登場するように改善（Inspectorでエディタを開く場合は除く）
+    レンダリングされていないメッシュの不要な処理を改善し、処理速度の向上
+    <color=red>（詳細はホームページを確認してください）</color>
+
+ - <color=blue>骨とリギング</color>の使いやすさの改善
+    設定ダイアログで、骨のサイズと拡大に伴うサイズの増加するかどうかの設定が可能
+    ワークスペースからの骨を選択するときのアウトラインの色が骨の色と区別されるように改善
+    ワークスペースでの骨を選択すると、アウトラインが弱く光沢をたてることによって区分しやすいように変更
+    新しい骨の外形的な「針状（Needle）」が追加さ
+    マウスでクリックする、骨もう少し選択しやすいように改善さ
+    メッシュグループの骨設定UIで、骨の色を簡単に設定できるプリセットボタンが追加された
+    「親と同じような色」にピョイ生成されるようオプションが設定されている場合、親の色と非常に似た色を持たないように変更
+    既存の他の色で構成されたリギンググラデーションが表示される「Vivid」オプションを追加
+    頂点の円形リギング重みの選択した領域がより区分しやすいようにするオプションを追加
+    頂点の円形リギング重みの大きさを設定するオプションを追加
+    頂点の円形リギング重みで選択された重みの値が小さい場合によく見えないので、円形の中央に別々に表示
+    頂点の円形リギング重みのクリック領域が従来より拡大
+    リギング作業画面の下部に、選択したメッシュにリギングされていない骨を半透明に表示または非表示にできるボタンが追加された
+    リギング重みを調節するためのショートカットを追加（Z、Xキー：0.02ずつ増減は、Shift + Z、Xキー：0.05ずつ増減）
+    リギング作業中に「Ctrl、Shift、Altキー」を押した状態では骨が選択されないように改善
+    骨の設定画面で、骨を削除するショートカット（Deleteキー）を追加
+    <color=red>（詳細はホームページを確認してください）</color>
+
+- モディファイアの「Colorオプション」でオブジェクトを非表示にしたり、見られるようにすると、半透明のされずに切り替わるようにするオプションを追加
+- AnyPortraitパッケージのインストールパスを変更することができるオプションを追加<color=red>（詳細はホームページを確認してください）</color>
+- 「Importantオプション」をオフにして、固定FPSで多数のキャラクターを配置して実行するの性能を向上させる
+- モディファイヤの編集を開始したり、終了したときに、メッシュ、骨の一時的非が維持されるようにオプションを選択した場合、他の作業をしても表示が維持されるように改善
+- 「Unity 2019.3」からツールチップの位置によりボタンを押すが困難になり、そのバージョンから、ツールチップが出ないように変更
+- Inspector UIでBakeがされていない状態のフレーズを変更
+
+
+
+<size=13>修正された問題</size>
+
+- PSDファイルを開いたときに、サブメッシュグループやその下位のメッシュのマッピングが解除されてしまう問題を修正
+- サブメッシュグループのオブジェクトの出力するかどうかの情報（目のアイコン）が正常に更新されない問題を修正
+- モディファイヤを編集する状態でGUI Controlエラーログが発生する問題を修正
+- 登録された「Root Unit」がないとき、Inspectorですぐにエディタを開くと、正常にエディタが実行されない問題を修正
+- アニメーションの対象メッシュグループを親メッシュグループに変更して、データを初期化した後、元に戻すをすると、関連のすべてのデータが破損される問題を修正
+- サブメッシュグループの骨にリギングがされた後、サブメッシュグループが削除されたとき、当該情報に起因Bakeが失敗する問題を修正
+- モディファイヤ編集時、メッシュグループのHierarchyを通し一つの骨と一つのメッシュ、またはメッシュのグループを同時に選択することができます問題を修正
+- 「FFDツール」を利用する中に他のオブジェクトを選択すると、FFDが解除されない問題を修正
+- 「Physicモディファイヤ」編集中に別のオブジェクトを選択すると、GUIエラーログが発生する問題を修正
+- 「Physicモディファイヤ」編集中にオブジェクトを選択すると、上部UIが異常に見える問題を修正
+-  Hierarchy UIで2レベルの子項目の前のマージンが異常して、親項目と区別するのは難しい問題を修正
+- アニメーションタイムラインUIの縦スクロールバーをマウスを用いて動くとき、正常にスクロールされない問題を修正
+- アニメーションの長さやLoopオプションを変更するときは、「オートループキーフレーム」が更新されない問題を修正
+- アニメーションの長さやLoopのオプションを変更したとき、「元に戻す」がない問題を修正
+- アニメーションのキーフレームのプロパティのUIでTransform項目のベクトル属性が（X、X）で出力されるミスを修正
+- マテリアルライブラリ（Material Library）でテクスチャタイプのカスタムプロパティを作成し、「Texture Per Image」を選択した場合、Bakeがされない問題を修正
+
+​
+
+
+
+-----------------------------------------
+(중국어-번체)
+<size=16>AnyPortrait更新日誌v1.2.3</size>
+（2020年4月25日）
+
+
+<size=13>改進</size>
+
+- <color=blue>動畫處理</color>的改進和問題已修復
+    改善了2個動畫剪輯之間的平滑過渡
+    大大改善了與動畫剪輯的過渡和分層有關的總體處理
+    修復了切換動畫剪輯時導致控制參數切換太快的問題
+    修復了動畫中整數控制參數的負值不能正常計算的問題
+    修復了在Unity的時間軸中重複播放剪輯時混合無法正常工作的問題
+    當使用“時間線模擬器”預覽Unity的時間線時，即使未在編輯器中運行遊戲，預覽也得到了改進。
+    <color=red>（有關更多信息，請訪問我們的主頁）</color>
+
+- 改進了<color=blue>編輯器UI</color>
+    編輯修改器時，無法在網格組的“層次結構” UI中水平滾動
+    改進了層次結構UI中的順序也適用於“控制器”選項卡
+    改進了修改器UI的頂部區域和頁邊距，使其更加直觀
+    即使在拖動時光標移到工作區之外，功能也能正常工作
+    如果設置對話框中的選項與默認值不同，則顏色顯示會有所不同
+    將設置恢復為默認設置時出現警告消息
+    Mac OSX中不區分Backspace和Delete，因此兩個鍵被識別為同一快捷方式
+    “垃圾桶圖標”已添加到所有“分離/刪除”按鈕
+    改進了動畫剪輯右側的UI
+    可以通過按Ctrl鍵並滾動鼠標滾輪來縮放動畫時間軸UI。
+    <color=red>（有關更多信息，請訪問我們的主頁）</color>
+
+- <color=blue>編輯器和遊戲性能優化</color>
+    修復了在刷新層次結構UI時導致不必要的內存使用和性能下降的問題
+    改進了許多過程的性能，例如，啟動修改器，在層次結構中選擇對像以及在修改器中添加和刪除網格時
+    改進了以下問題：當有許多動畫剪輯時，編輯器的處理時間增加了
+    首次在編輯器中加載人像時，將顯示一個彈出窗口以查看加載過程（在“檢查器”中打開編輯器時除外）
+    通過優化非渲染網格的不必要處理，提高了處理速度
+    <color=red>（有關更多信息，請訪問我們的主頁）</color>
+
+- 改進了<color=blue>骨頭和索具</color>的可用性
+    在設置對話框中，您可以設置骨骼的大小以及是否根據屏幕縮放來增加大小
+    在工作空間中，骨骼輪廓的顏色更改為與骨骼顏色不同
+    在工作空間中選擇骨骼時，骨骼的輪廓會稍微發亮以易於區分
+    添加了新的骨頭形狀“針狀”
+    用鼠標單擊時選擇骨骼比以前更容易
+    在網格組的骨骼設置UI中，添加了用於輕鬆設置骨骼顏色的預設按鈕。
+    如果將骨骼選項設置為新骨骼的顏色與父級相似，則其顏色與父級的相似度不會太大
+    添加了“生動”選項以顯示由不同顏色組成的索具漸變
+    添加了選項以使頂點的圓形索具權重的選定區域易於區分
+    添加了該選項以設置頂點的圓形裝配權重的大小
+    如果頂點的圓形裝配權重中的權重值較小，則很難看到，因此將其分別顯示在圓心處
+    頂點的圓形索具配重的點擊面積比以前大
+    添加了此功能以顯示半透明或隱藏非索具骨骼
+    添加了快捷鍵以調整索具重量（Z，X：更改為0.02，Shift + Z，X：更改為0.05）
+    在編輯裝備中按住Ctrl，Shift或Alt鍵的同時，未選擇骨骼
+    在設置屏幕中添加了用於刪除骨骼的快捷鍵（刪除鍵）
+    <color=red>（有關更多信息，請訪問我們的主頁）</color>
+
+- 使用修改器的“顏色”選項隱藏或顯示對象時，添加了一個無需半透明即可立即切換的選項
+- 添加了一個選項來更改AnyPortrait軟件包的安裝路徑<color=red>（有關更多信息，請訪問我們的主頁）</color>
+- 通過關閉“重要”選項，以固定FPS放置和運行多個角色時，遊戲性能得到改善
+- 進行了改進，即使選擇了保持網格和骨骼暫時可見性的選項，即使您執行任何操作也可以保持暫時可見性
+- 從Unity 2019.3開始，由於工具提示的位置變得很難按下按鈕，因此該工具提示不會從該版本顯示
+- 在Inspector UI中更改了有關非烘烤的文本
+
+
+
+<size=13>修復了問題</size>
+
+- 修復了打開PSD文件時釋放到子網格組及其子網格的映射的問題
+- 修復了無法正確刷新子網格組中對象的可見性信息（眼睛圖標）的錯誤
+- 修復了編輯修改器時發生GUI控制錯誤日誌的問題
+- 修復了一個錯誤，該錯誤是在沒有註冊的Root Unit且直接在Inspector中打開編輯器時，編輯器無法正常運行的錯誤
+- 修復了一個錯誤，即在將動畫的目標網格組更改為父網格組並初始化數據時，撤消會導致所有數據損壞
+- 修復了以下錯誤：由於從父網格物體中綁定了子網格物體組而刪除了子網格物體時，由於數據導致烘焙失敗
+- 修復了以下問題：編輯修改器時，可以通過網格組的層次結構同時選擇骨骼，網格或子網格組
+- 修復了使用FFD工具選擇了另一個對象時無法釋放FFD工具的錯誤。
+- 已修復在物理修改器編輯期間選擇另一個對象時發生GUI錯誤日誌的問題
+- 修復了在編輯物理修改器時選擇對象時，頂部用戶界面顯示異常的問題
+- 修復了一個問題，即由於層次結構UI中第二級子項的前邊距很奇怪，因此很難與父項區分開
+- 修復了使用鼠標時動畫時間軸UI的垂直滾動條無法正常工作的問題
+- 修復了更改動畫長度或循環選項時不刷新“自動循環關鍵幀”的問題
+- 修復了更改動畫長度或循環選項時“撤消”不起作用的問題
+- 固定錯字，其中在動畫的關鍵幀屬性UI中，將“變換”項的矢量屬性輸出為（X，X），並輸出為（X，Y）
+- 修復了在材質庫中創建自定義屬性作為紋理類型並選擇“每個圖像的紋理”時無法正確處理“烘烤”的問題。
+
+
+
+-----------------------------------------
+(중국어-간체)
+<size=16>AnyPortrait更新日志v1.2.3</size>
+（2020年4月25日）
+
+
+<size=13>改进</size>
+
+- <color=blue>动画处理</color>的改进和问题已修复
+    改善了2个动画剪辑之间的平滑过渡
+    大大改善了与动画剪辑的过渡和分层有关的总体处理
+    修复了切换动画剪辑时导致控制参数切换太快的问题
+    修复了动画中整数控制参数的负值不能正常计算的问题
+    修复了在Unity的时间轴中重复播放剪辑时混合无法正常工作的问题
+    当使用“时间线模拟器”预览Unity的时间线时，即使未在编辑器中运行游戏，预览也得到了改进。
+    <color=red>（有关更多信息，请访问我们的主页）</color>
+
+-改进了<color=blue>编辑器UI</color>
+    编辑修改器时，无法在网格组的“层次结构” UI中水平滚动
+    改进了层次结构UI中的顺序也适用于“控制器”选项卡
+    改进了修改器UI的顶部区域和页边距，使其更加直观
+    即使在拖动时光标移到工作区之外，功能也能正常工作
+    如果设置对话框中的选项与默认值不同，则颜色显示会有所不同
+    将设置恢复为默认设置时出现警告消息
+    Mac OSX中不区分Backspace和Delete，因此两个键被识别为同一快捷方式
+    “垃圾桶图标”已添加到所有“分离/删除”按钮
+    改进了动画剪辑右侧的UI
+    可以通过按Ctrl键并滚动鼠标滚轮来缩放动画时间轴UI。
+    <color=red>（有关更多信息，请访问我们的主页）</color>
+
+- <color=blue>编辑器和游戏性能优化</color>
+    修复了在刷新层次结构UI时导致不必要的内存使用和性能下降的问题
+    改进了许多过程的性能，例如，启动修改器，在层次结构中选择对象以及在修改器中添加和删除网格时
+    改进了以下问题：当有许多动画剪辑时，编辑器的处理时间增加了
+    首次在编辑器中加载人像时，将显示一个弹出窗口以查看加载过程（在“检查器”中打开编辑器时除外）
+    通过优化非渲染网格的不必要处理，提高了处理速度
+    <color=red>（有关更多信息，请访问我们的主页）</color>
+
+-改进了<color=blue>骨头和索具</color>的可用性
+    在设置对话框中，您可以设置骨骼的大小以及是否根据屏幕缩放来增加大小
+    在工作空间中，骨骼轮廓的颜色更改为与骨骼颜色不同
+    在工作空间中选择骨骼时，骨骼的轮廓会稍微发亮以易于区分
+    添加了新的骨头形状“针状”
+    用鼠标单击时选择骨骼比以前更容易
+    在网格组的骨骼设置UI中，添加了用于轻松设置骨骼颜色的预设按钮。
+    如果将骨骼选项设置为新骨骼的颜色与父级相似，则其颜色与父级的相似度不会太大
+    添加了“生动”选项以显示由不同颜色组成的索具渐变
+    添加了选项以使顶点的圆形索具权重的选定区域易于区分
+    添加了该选项以设置顶点的圆形装配权重的大小
+    如果顶点的圆形装配权重中的权重值较小，则很难看到，因此将其分别显示在圆心处
+    顶点的圆形索具配重的点击面积比以前大
+    添加了此功能以显示半透明或隐藏非索具骨骼
+    添加了快捷键以调整索具重量（Z，X：更改为0.02，Shift + Z，X：更改为0.05）
+    在编辑装备中按住Ctrl，Shift或Alt键的同时，未选择骨骼
+    在设置屏幕中添加了用于删除骨骼的快捷键（删除键）
+    <color=red>（有关更多信息，请访问我们的主页）</color>
+
+- 使用修改器的“颜色”选项隐藏或显示对象时，添加了一个无需半透明即可立即切换的选项
+- 添加了一个选项来更改AnyPortrait软件包的安装路径<color=red>（有关更多信息，请访问我们的主页）</color>
+- 通过关闭“重要”选项，以固定FPS放置和运行多个角色时，游戏性能得到改善
+- 进行了改进，即使选择了保持网格和骨骼暂时可见性的选项，即使您执行任何操作也可以保持暂时可见性
+- 从Unity 2019.3开始，由于工具提示的位置变得很难按下按钮，因此该工具提示不会从该版本显示
+- 在Inspector UI中更改了有关非烘烤的文本
+
+
+
+<size=13>修复了问题</size>
+
+-修复了打开PSD文件时释放到子网格组及其子网格的映射的问题
+-修复了无法正确刷新子网格组中对象的可见性信息（眼睛图标）的错误
+-修复了编辑修改器时发生GUI控制错误日志的问题
+-修复了一个错误，该错误是在没有注册的Root Unit且直接在Inspector中打开编辑器时，编辑器无法正常工作
+-修复了一个错误，即在将动画的目标网格组更改为父网格组并初始化数据时，撤消会导致所有数据损坏
+-修复了以下错误：由于从父网格物体中绑定了子网格物体组而删除了子网格物体时，由于数据导致烘焙失败
+-修复了以下问题：编辑修改器时，可以通过网格组的层次结构同时选择骨骼，网格或子网格组
+-修复了使用FFD工具选择了另一个对象时无法释放FFD工具的错误。
+-已修复在物理修改器编辑期间选择另一个对象时发生GUI错误日志的问题
+-修复了在编辑物理修改器时选择对象时，顶部用户界面显示异常的问题
+-修复了一个问题，即由于层次结构UI中第二级子项的前边距很奇怪，因此很难与父项区分开
+-修复了使用鼠标时动画时间轴UI的垂直滚动条无法正常工作的问题
+-修复了更改动画长度或循环选项时不刷新“自动循环关键帧”的问题
+-修复了更改动画长度或循环选项时“撤消”不起作用的问题
+-固定错字，其中在动画的关键帧属性UI中，将“变换”项的矢量属性输出为（X，X），并输出为（X，Y）
+-修复了在材质库中创建自定义属性作为纹理类型并选择“每个图像的纹理”时无法正确处理“烘烤”的问题。
+
+
+
+-----------------------------------------
+(폴란드어)
+<size=16>Dziennik aktualizacji AnyPortret v1.2.3</size>
+(Zbuduj 25 kwietnia 2020 r.)
+
+
+<size=13>Ulepszenia</size>
+
+- Poprawione i poprawione <color=blue>Przetwarzanie animacji</color>
+    Usprawniono płynne przejście między 2 klipami animacyjnymi
+    Znacząco poprawiona ogólna obsługa związana z przejściami i nakładaniem warstw klipów animacyjnych
+    Rozwiązano problem, który powodował zbyt szybkie przełączanie parametrów sterowania podczas przełączania klipów animacji
+    Rozwiązano problem związany z tym, że ujemna wartość parametru kontrolnego liczby całkowitej w animacji nie jest obliczana normalnie
+    Rozwiązano problem polegający na tym, że mieszanie nie działa poprawnie, gdy klipy są odtwarzane wielokrotnie na osi czasu Unity
+    Podczas korzystania z „Symulatora osi czasu”, który wyświetla podgląd Osi czasu Unity, ulepszono podgląd, nawet gdy gra nie jest uruchomiona w edytorze.
+    <color=red>(Aby uzyskać więcej informacji, odwiedź naszą stronę główną)</color>
+
+- Ulepszenie <color=blue>Interfejs edytora</color>
+    Podczas edycji modyfikatora nie można przewijać w poziomie w interfejsie Hierarchy grupy mesh
+    Ulepszono, że kolejność w interfejsie użytkownika hierarchii dotyczy również karty Kontrolera
+    Obszar górny i marginesy interfejsu modyfikatora zostały ulepszone, aby były bardziej intuicyjne
+    Funkcja działa normalnie, nawet jeśli kursor przesuwa się poza obszar roboczy podczas przeciągania
+    Jeśli opcje w oknie dialogowym ustawień różnią się od wartości domyślnych, kolory są wyświetlane inaczej
+    Komunikat ostrzegawczy pojawia się podczas przywracania ustawień domyślnych
+    Klawisz Backspace i Delete nie są rozróżniane w Mac OSX, więc dwa klawisze są rozpoznawane jako ten sam skrót
+    „Ikona kosza” jest dodawana do wszystkich przycisków Odłącz / Usuń
+    Ulepszony interfejs użytkownika po prawej stronie klipu animacji
+    Interfejs osi czasu animacji można powiększyć, naciskając klawisz Ctrl i przewijając kółko myszy.
+    <color=red>(Aby uzyskać więcej informacji, odwiedź naszą stronę główną)</color>
+
+- <color=blue>Edytor i optymalizacja wydajności gry</color>
+    Problem został rozwiązany, który powodował niepotrzebne użycie pamięci i niską wydajność po odświeżeniu interfejsu użytkownika hierarchii
+    Poprawiono wydajność wielu procesów, takich jak uruchamianie modyfikatorów, wybieranie obiektów w Hierarchii oraz dodawanie i usuwanie siatek w modyfikatorach
+    Rozwiązano problem polegający na tym, że czas przetwarzania edytora wydłuża się, gdy jest wiele klipów animacyjnych
+    Podczas ładowania portretu po raz pierwszy w edytorze wyświetlane jest okno podręczne, aby zobaczyć proces ładowania (z wyjątkiem otwierania edytora w Inspektorze)
+    Szybkość przetwarzania poprawia się, optymalizując niepotrzebne przetwarzanie niewyrenderowanych siatek
+    <color=red>(Aby uzyskać więcej informacji, odwiedź naszą stronę główną)</color>
+
+- Poprawiona użyteczność <color=blue>Bones and Rigging</color>
+    W oknie dialogowym ustawień można ustawić rozmiar kości i określić, czy rozmiar zwiększa się zgodnie z powiększeniem ekranu
+    W obszarze roboczym kolor obrysu kości zmienia się, aby był inny niż kolor kości
+    Po wybraniu kości w obszarze roboczym zarys kości jest lekko błyszczący, aby można go było łatwo odróżnić
+    Dodano „Kształt igły”, który jest nowym kształtem kości
+    Łatwiej jest wybrać kości, klikając myszą niż wcześniej
+    W interfejsie użytkownika ustawień kości grupy siatki dodawane są wstępnie ustawione przyciski do łatwego ustawiania koloru kości
+    Jeśli ustawiono opcję kości, że kolor nowej kości jest podobny do rodzica, jej kolor nie jest zbyt podobny do rodzica niż wcześniej
+    Dodano opcję „Żywe”, aby pokazać gradację olinowania złożoną z różnych kolorów
+    Dodano opcję, aby ułatwić rozróżnienie wybranego obszaru kołowych obciążników takielunku
+    Dodano opcję, aby ustawić rozmiar odważników kołowych wierzchołków
+    Jeśli wartość masy w odważnikach kołowych wierzchołka jest niewielka, trudno ją zobaczyć, więc jest wyświetlana osobno na środku koła
+    Obszar kliknięcia okrągłego ciężaru olinowania jest większy niż wcześniej
+    Ta funkcja została dodana, aby pokazać półprzezroczyste lub ukryć nieorygujące kości
+    Klawisze skrótów są dodawane w celu dostosowania ciężaru olinowania (Z, X: zmiana o 0,02, Shift + Z, X: zmiana o 0,05)
+    Przytrzymując klawisz Ctrl, Shift lub Alt podczas edycji olinowania, kości nie są zaznaczone
+    Dodano klawisz skrótu do usuwania kości na ekranie ustawień (klawisz Delete)
+    <color=red>(Aby uzyskać więcej informacji, odwiedź naszą stronę główną)</color>
+
+- Podczas ukrywania lub pokazywania obiektów za pomocą opcji Kolor modyfikatora dodaje się opcję natychmiastowego przełączania bez przezroczystości
+- Dodano opcję zmiany ścieżki instalacji pakietu AnyPortrait <color=red>(Aby uzyskać więcej informacji, odwiedź naszą stronę główną)</color>
+- Poprawiono wydajność w grze podczas umieszczania i uruchamiania wielu postaci ze stałym FPS poprzez wyłączenie opcji Ważna
+- Poprawiono tak, aby tymczasowa widoczność była zachowana, nawet jeśli wykonasz jakąkolwiek akcję, jeśli wybrana jest opcja tymczasowej widoczności oczek i kości
+- Od Unity 2019.3 naciśnięcie przycisku staje się trudne ze względu na lokalizację podpowiedzi, więc podpowiedź nie pojawia się w tej wersji
+- W interfejsie Inspektora zmieniono tekst o braku pieczenia
+
+
+
+<size=13>Naprawiono problem</size>
+
+- Naprawiono problem polegający na tym, że mapowanie na grupy podsieci i ich siatki potomne zostało zwolnione podczas otwierania pliku PSD
+- Naprawiono błąd polegający na tym, że informacje o widoczności (ikona oka) obiektów w grupie podsieci nie są odpowiednio odświeżane
+- Naprawiono problem polegający na tym, że podczas edytowania modyfikatora pojawiał się dziennik błędów kontroli GUI
+- Naprawiono błąd polegający na tym, że edytor nie działa poprawnie, gdy nie ma zarejestrowanej jednostki głównej, a edytor jest otwierany bezpośrednio w Inspektorze
+- Naprawiono błąd polegający na tym, że cofnięcie spowodowało uszkodzenie wszystkich danych podczas zmiany docelowej grupy siatek animacji na macierzystą grupę siatek, inicjowanie danych
+- Naprawiono błąd polegający na tym, że upieczenie nie powiodło się z powodu danych, gdy grupa podsieci została usunięta po zmontowaniu z siatek rodzica
+- Naprawiono problem polegający na tym, że jednoczesne wybranie kości, siatki lub podgrupy za pomocą Hierarchii grupy siatek jest możliwe podczas edycji modyfikatora
+- Naprawiono błąd polegający na tym, że narzędzie FFD nie jest zwalniane po wybraniu innego obiektu podczas korzystania z narzędzia FFD
+- Naprawiono problem polegający na tym, że dziennik błędów GUI pojawia się podczas wybierania innego obiektu podczas edycji modyfikatora fizyki
+- Naprawiono problem polegający na tym, że górny interfejs użytkownika był dziwnie wyświetlany podczas wybierania obiektu podczas edycji modyfikatora fizyki
+- Naprawiono problem polegający na tym, że trudno było odróżnić element nadrzędny, ponieważ przedni margines elementu podrzędnego 2. poziomu był dziwny w interfejsie użytkownika hierarchii
+- Naprawiono błąd polegający na tym, że pionowy pasek przewijania interfejsu użytkownika osi czasu animacji nie działa normalnie podczas używania myszy
+- Naprawiono problem polegający na tym, że „Klatki kluczowe automatycznej pętli” nie są odświeżane przy zmianie długości animacji lub opcji pętli
+- Naprawiono problem polegający na tym, że „Cofnij” nie działa przy zmianie długości animacji lub opcji pętli
+- Naprawiono literówkę, w której właściwości wektorowe elementu Przekształcenie są wyprowadzane jako (X, X), aby były wyprowadzane jako (X, Y) w interfejsie użytkownika właściwości klatki kluczowej animacji
+- Naprawiono problem polegający na tym, że „Piec” nie jest poprawnie przetwarzany, gdy właściwość niestandardowa jako typ tekstury jest tworzona w Bibliotece materiałów i wybrana jest „Tekstura na obraz”.
+
+
+
+-----------------------------------------

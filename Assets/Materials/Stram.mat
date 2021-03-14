@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stram
+  m_Shader: {fileID: -6465566751694194690, guid: 54102d747d105db48b5011c6bfcbeacf,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_3ABD3B8C:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7B3BB09B:
+        m_Texture: {fileID: 2800000, guid: 06f04696a1630674482614a3511da8eb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_E9614DF2:
+        m_Texture: {fileID: 2800000, guid: 718971eb045fe614b89685bc3edc652e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 10900, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_2CCEE0D5: 1
+    - Vector1_3319EE8D: 0
+    - Vector1_52909EDA: 10.4
+    - Vector1_6A8B50F0: 1
+    - Vector1_6DC85EF7: 7.28
+    - Vector1_8805B3B7: 0.3
+    - Vector1_8F5EE685: 2
+    - Vector1_BB49C78C: 1
+    - Vector1_DC129BE: 2.71
+    - Vector1_DD119790: 1.358
+    - _EnableExternalAlpha: 0
+    - _Frozen: 0
+    m_Colors:
+    - Color_19D00DB2: {r: 0.24083298, g: 0.6490456, b: 0.7735849, a: 1}
+    - Color_4BDDB20F: {r: 0.13955145, g: 0.38599038, b: 0.6037736, a: 1}
+    - Color_66A6A10D: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+    - Color_7A22452: {r: 0.5660378, g: 0.762549, b: 1, a: 1}
+    - Color_A0D31A6A: {r: 0.18956923, g: 0.52891624, b: 0.5660378, a: 1}
+    - Color_C94D4490: {r: 0.73700607, g: 0.8539874, b: 0.8584906, a: 1}
+    - Vector2_2F7B3F9F: {r: 0.26, g: 0.57, b: 0, a: 0}
+    - Vector2_AAD1208D: {r: 0, g: 0.1, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

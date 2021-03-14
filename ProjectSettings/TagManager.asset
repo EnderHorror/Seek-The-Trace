@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Through
+  - End
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - Player
+  - LandObject
+  - Interacter
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: FarGround
+    uniqueID: 1796066279
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: MidLayer
+    uniqueID: 1395112865
+    locked: 0
+  - name: NearLayer
+    uniqueID: 1368966603
+    locked: 0
